@@ -23,7 +23,7 @@ We propose a method that allows one to fine-tune a pre-trained text model in any
  For more in-depth details see our work-in-progress [Arxiv paper](www.google.com).
 
 
-<b>This repository contains:</b>
+#### This repository contains
 * Pre-trained CLIP-Text encoders for multiple languages
 * Tensorflow 2 and Pytorch inference code
 * Tensorflow 2 code for training CLIP text encoders for any language
@@ -37,7 +37,7 @@ While it is possible that other versions works equally fine, we have worked with
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-All the models and tokenizers are available via the Huggingface interface, and can be loaded for both Tensorflow and PyTorch:
+
 ```python
 import transformers
 
@@ -47,18 +47,11 @@ TF_model = transformers.TFAutoModel.from_pretrained('Contrastive-Tension/RoBerta
 PT_model = transformers.AutoModel.from_pretrained('Contrastive-Tension/RoBerta-Large-CT-STSb')
 ```
 
-### Inference
-To perform inference with the pre-trained models (or other Huggigface models) please see the script [ExampleBatchInference.py](ExampleBatchInference.py). <br>
-The most important thing to remember when running inference is to apply the attention_masks on the batch output vector before mean pooling, as is done in the example script.
-
-### CT Training
-To run CT on your own models and text data see [ExampleTraining.py](ExampleTraining.py) for a comprehensive example. This file currently creates a dummy corpus of random text. Simply replace this to whatever corpus you like.
 
 <!-- GETTING STARTED -->
 ## Pre-trained Models
-Note that these models are <b>not</b> trained with the exact hyperparameters as those disclosed in the original CT paper. Rather, the parameters are from a short follow-up paper currently under review, which once again pushes the SOTA.
+Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top, available at [GoogleDrive](www.google.drive.com). We recommend downloading them seperatly to not struggre with Tensorflow/PyTorch versions. But for conveniance, the transformer and the linear layer can also be downloaded as a complete Tensorflow/PyTorch model directly from GoogleDrive aswell. <br> 
 
-All evaluation is done using the [SentEval](https://github.com/facebookresearch/SentEval) framework, and shows the: (Pearson / Spearman) correlations
 ### Unsupervised / Zero-Shot
 As both the training of BERT, and CT itself is fully self-supervised, the models only tuned with CT require no labeled data whatsoever.<br>
 The NLI models however, are first fine-tuned towards a natural language inference task, which requires labeled data.
