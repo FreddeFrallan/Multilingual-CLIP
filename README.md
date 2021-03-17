@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <h1 align="center">Multilingual-CLIP</h1>
-  <h3 align="center">OpenAI CLIP text encoders for multiple languages</h3>
+  <h3 align="center">OpenAI CLIP text encoders for any language</h3>
   
   <p align="center">  
     <a href="https://openreview.net/pdf?id=Ov_sMNau-PF">Arxiv Paper</a>
@@ -19,15 +19,15 @@
 CLIP consists of two separate models, a visual encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. 
 OpenAI has since released a set of their smaller CLIP models, which can be found on the [official CLIP Github repo](https://github.com/openai/CLIP).
 
-Since the existing vision and text model are separable, and since they have already done the hard task of creating a Vision-Text embedding space.
-By leveraging already existing language models, one can easily fine-tune a new pre-trained text model to simply match the representations of the existing CLIP Text encoder. Hence, by utilizing machine translation and/or pre-trained multilingual models, one can cost-efficiently make CLIP available to a non-English language. For more details see our work-in-progress [Arxiv paper](www.google.com).
+We propose a method that allows one to fine-tune a pre-trained text model in any language to replace the already existing English CLIP Text encoder. Thus, by utilizing pre-trained non-English/Multilingual Language Models, one can cost-efficiently make the powerful CLIP available to a non-English language in roughly <b>24</b> GPU hours. <br>
+ For more in-depth details see our work-in-progress [Arxiv paper](www.google.com).
 
 
-This repository contains:
+<b>This repository contains:</b>
 * Pre-trained CLIP-Text encoders for multiple languages
 * Tensorflow 2 and Pytorch inference code
 * Tensorflow 2 code for training CLIP text encoders for any language
-* ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
+* Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
@@ -107,9 +107,7 @@ For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [SentEval](https://github.com/facebookresearch/SentEval)
 * [Huggingface](https://huggingface.co/)
-* [Sentence-Transformer](https://github.com/UKPLab/sentence-transformers)
 * [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
 
 
