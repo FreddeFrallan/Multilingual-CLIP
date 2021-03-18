@@ -68,10 +68,10 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 | Name |Model Base| Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
-|| [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
+|| [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
 | [M-BERT Distil 40](https://huggingface.co/M-CLIP/M-BERT-Distil-40) | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 40 Languages | 66 M|
-| | [M-BERT Base Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
-|**Single Language**    ||
+| | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
+|**Single**    ||
 |[Swe-CLIP 500k](https://huggingface.co/M-CLIP/Swedish-500k)| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)             | Swedish | Swedish | 110 M|
 
 ## Contribution
