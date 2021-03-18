@@ -4,9 +4,9 @@
   <h3 align="center">OpenAI CLIP text encoders for any language</h3>
   
   <p align="center">  
-    <a href="https://openreview.net/pdf?id=Ov_sMNau-PF">Arxiv Paper</a>
+    <a href="https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb">Colab Demo</a>
     ·
-    <a href="https://huggingface.co/Contrastive-Tension">Pre-trained Models</a>
+    <a href="https://huggingface.co/M-CLIP">Pre-trained Models</a>
     ·
     <a href="https://github.com/FreddeFrallan/Contrastive-Tension/issues">Report Bug</a>
   </p>
