@@ -35,6 +35,10 @@ While it is possible that other versions works equally fine, we have worked with
 
 * Python = 3.6.9
 * Transformers = 4.1.1
+* Get weights for models
+```bash
+$ bash get-weights.sh
+```
 * CLIP
 ```bash
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
