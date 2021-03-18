@@ -57,16 +57,14 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 As both the training of BERT, and CT itself is fully self-supervised, the models only tuned with CT require no labeled data whatsoever.<br>
 The NLI models however, are first fine-tuned towards a natural language inference task, which requires labeled data.
 
-| Model| Avg Unsupervised STS |STS-b | #Parameters|
-| ----------------------------------|:-----: |:-----: |:-----: |
-|**Fully Unsupervised**    ||
-| [BERT-Distil-CT](https://huggingface.co/Contrastive-Tension/BERT-Distil-CT)             | 75.12 / 75.04| 78.63 / 77.91 | 66 M|
-| [BERT-Base-CT](https://huggingface.co/Contrastive-Tension/BERT-Base-CT)  | 73.55 / 73.36 | 75.49 / 73.31 | 108 M|
-| [BERT-Large-CT](https://huggingface.co/Contrastive-Tension/BERT-Large-CT)        | 77.12 / 76.93| 80.75 / 79.82 | 334 M|
-|**Using NLI Data**    ||
-| [BERT-Distil-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Distil-NLI-CT)             | 76.65 / 76.63 | 79.74 / 81.01 | 66 M|
-| [BERT-Base-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Base-NLI-CT)  | 76.05 / 76.28 | 79.98 / 81.47  | 108 M|
-| [BERT-Large-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Large-NLI-CT)        | <b> 77.42 / 77.41 </b> | <b> 80.92 / 81.66 </b>  | 334 M|
+| Link |Model Base| Pre-trained Languages | Fine-tuned Languages | #Parameters|
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: |
+|**Multilingual**    ||
+| Link | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
+| M-CLIP | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 40 Languages | 66 M|
+| Link | [M-BERT Base Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
+|**Single Language**    ||
+|Swe-CLIP| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)             | Swedish | Swedish | 110 M|
 
 ## Contribution
 If you have trained a CLIP Text encoder specific to your language, or another model covering a language not supported here, Please feel free to contact us and we will either upload your model and credit you, or simply link to your already uploaded model.
