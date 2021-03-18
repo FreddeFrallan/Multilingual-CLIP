@@ -36,6 +36,13 @@ While it is possible that other versions works equally fine, we have worked with
 
 * Python = 3.6.9
 * Transformers = 4.1.1
+* CLIP
+```bash
+$ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
+$ pip install ftfy regex tqdm
+$ pip install git+https://github.com/openai/CLIP.git
+```
+Replace `cudatoolkit=11.0` above with the appropriate CUDA version on your machine or `cpuonly` when installing on a machine without a GPU.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
