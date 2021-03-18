@@ -27,8 +27,7 @@ We propose a fine-tuning to replace the original English text encoder with a pre
 
 #### This repository contains
 * Pre-trained CLIP-Text encoders for multiple languages
-* Tensorflow 2 and Pytorch inference code
-* Tensorflow 2 code for training CLIP text encoders for any language
+* Pytorch inference code
 * Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
 
 ### Requirements
@@ -65,44 +64,20 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 As both the training of BERT, and CT itself is fully self-supervised, the models only tuned with CT require no labeled data whatsoever.<br>
 The NLI models however, are first fine-tuned towards a natural language inference task, which requires labeled data.
 
-| Model| Avg Unsupervised STS |STS-b | #Parameters|
-| ----------------------------------|:-----: |:-----: |:-----: |
-|**Fully Unsupervised**    ||
-| [BERT-Distil-CT](https://huggingface.co/Contrastive-Tension/BERT-Distil-CT)             | 75.12 / 75.04| 78.63 / 77.91 | 66 M|
-| [BERT-Base-CT](https://huggingface.co/Contrastive-Tension/BERT-Base-CT)  | 73.55 / 73.36 | 75.49 / 73.31 | 108 M|
-| [BERT-Large-CT](https://huggingface.co/Contrastive-Tension/BERT-Large-CT)        | 77.12 / 76.93| 80.75 / 79.82 | 334 M|
-|**Using NLI Data**    ||
-| [BERT-Distil-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Distil-NLI-CT)             | 76.65 / 76.63 | 79.74 / 81.01 | 66 M|
-| [BERT-Base-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Base-NLI-CT)  | 76.05 / 76.28 | 79.98 / 81.47  | 108 M|
-| [BERT-Large-NLI-CT](https://huggingface.co/Contrastive-Tension/BERT-Large-NLI-CT)        | <b> 77.42 / 77.41 </b> | <b> 80.92 / 81.66 </b>  | 334 M|
+| Link |Model Base| Pre-trained Languages | Fine-tuned Languages | #Parameters|
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: |
+|**Multilingual**    ||
+| Link | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
+| M-CLIP | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 40 Languages | 66 M|
+| Link | [M-BERT Base Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
+|**Single Language**    ||
+|Swe-CLIP| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)             | Swedish | Swedish | 110 M|
 
-### Supervised
-These models are fine-tuned directly with STS data, using a modified version of the supervised training object proposed by [S-BERT](https://arxiv.org/abs/1908.10084).<br>
-To our knowledge our RoBerta-Large-STSb is the current SOTA model for STS via sentence embeddings.
-
-| Model| STS-b | #Parameters|
-| ----------------------------------|:-----: |:-----: |
-| [BERT-Distil-CT-STSb](https://huggingface.co/Contrastive-Tension/BERT-Distil-CT-STSb)             | 84.85 / 85.46  | 66 M|
-| [BERT-Base-CT-STSb](https://huggingface.co/Contrastive-Tension/BERT-Base-CT-STSb)  | 85.31 / 85.76  | 108 M|
-| [BERT-Large-CT-STSb](https://huggingface.co/Contrastive-Tension/BERT-Large-CT-STSb)        | 85.86 / 86.47  | 334 M|
-| [RoBerta-Large-CT-STSb](https://huggingface.co/Contrastive-Tension/RoBerta-Large-CT-STSb)        | <b> 87.56 / 88.42 </b>  | 334 M|
-
-### Other Languages
-
-| Model | Language | #Parameters|
-| ----------------------------------|:-----: |:-----: |
-| [BERT-Base-Swe-CT-STSb](https://huggingface.co/Contrastive-Tension/BERT-Base-Swe-CT-STSb/tree/main)             | Swedish  | 108 M|
-
-
-
-<!-- LICENSE -->
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
+## Contribution
+If you have trained a CLIP Text encoder specific to your language, or another model covering a language not supported here, Please feel free to contact us and we will either upload your model and credit you, or simply link to your already uploaded model.
 
 <!-- CONTACT -->
 ## Contact
-If you have questions regarding the paper, please consider creating a comment via the official [OpenReview submission](https://openreview.net/forum?id=Ov_sMNau-PF). </br>
 If you have questions regarding the code or otherwise related to this Github page, please open an [issue](https://github.com/FreddeFrallan/Contrastive-Tension/issues).
 
 For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
@@ -111,6 +86,10 @@ For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
 ## Acknowledgements
 * [Huggingface](https://huggingface.co/)
 * [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
+
+<!-- LICENSE -->
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
