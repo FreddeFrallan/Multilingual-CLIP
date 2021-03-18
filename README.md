@@ -13,7 +13,6 @@
 </p>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb)
-https://github.com/
 
 <!-- ABOUT THE PROJECT -->
 ## Overview
