@@ -64,10 +64,6 @@ PT_model = transformers.AutoModel.from_pretrained('Contrastive-Tension/RoBerta-L
 ## Pre-trained Models
 Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top, available at [GoogleDrive](www.google.drive.com). We recommend downloading them seperatly to not struggre with Tensorflow/PyTorch versions. But for conveniance, the transformer and the linear layer can also be downloaded as a complete Tensorflow/PyTorch model directly from GoogleDrive aswell. <br> 
 
-### Unsupervised / Zero-Shot
-As both the training of BERT, and CT itself is fully self-supervised, the models only tuned with CT require no labeled data whatsoever.<br>
-The NLI models however, are first fine-tuned towards a natural language inference task, which requires labeled data.
-
 | Link |Model Base| Pre-trained Languages | Fine-tuned Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
