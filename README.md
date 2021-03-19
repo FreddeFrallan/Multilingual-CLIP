@@ -14,6 +14,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb)
 
+
 <!-- ABOUT THE PROJECT -->
 ## Overview
 ![Alt text](Multilingual-CLIP.png?raw=true "Title")
@@ -87,6 +88,7 @@ For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
 ## Acknowledgements
 * [Huggingface](https://huggingface.co/)
 * [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
+* ["Two Cats" Image by pl1602](https://search.creativecommons.org/photos/8dfd802b-58e5-4cc5-889d-96abba540de1)
 
 <!-- LICENSE -->
 ## License
