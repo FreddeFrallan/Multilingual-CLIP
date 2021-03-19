@@ -1,3 +1,5 @@
+### *** The documentation for this repostitory and models are currently a work in progress ***
+
 <br />
 <p align="center">
   <h1 align="center">Multilingual-CLIP</h1>
