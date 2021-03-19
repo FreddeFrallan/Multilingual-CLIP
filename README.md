@@ -96,7 +96,7 @@ For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [CLIP] (https://openai.com/blog/clip/)
+* [CLIP](https://openai.com/blog/clip/)
 * [OpenAI](https://openai.com/)
 * [Huggingface](https://huggingface.co/)
 * [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
