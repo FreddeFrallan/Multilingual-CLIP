@@ -39,7 +39,7 @@ While it is possible that other versions works equally fine, we have worked with
 * Model Weights
 
 ## Usage
-### Download CLIP Model
+##### Download CLIP Model
 ```bash
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
 $ pip install ftfy regex tqdm
@@ -47,7 +47,7 @@ $ pip install git+https://github.com/openai/CLIP.git
 ```
 Replace `cudatoolkit=11.0` above with the appropriate CUDA version on your machine or `cpuonly` when installing on a machine without a GPU.
 For more information please see the official [CLIP repostitory](https://github.com/openai/CLIP).
-### Download Linear Weights
+##### Download Linear Weights
 ```bash
 # Linear Model Weights
 $ bash get-weights.sh
