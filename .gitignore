@@ -115,6 +115,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# IDEA
+.idea/
+
 ### Python Patch ###
 .venv/
 

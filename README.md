@@ -4,18 +4,20 @@
   <h3 align="center">OpenAI CLIP text encoders for any language</h3>
   
   <p align="center">  
-    <a href="https://openreview.net/pdf?id=Ov_sMNau-PF">Arxiv Paper</a>
+    <a href="https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb">Colab Demo</a>
     ·
-    <a href="https://huggingface.co/Contrastive-Tension">Pre-trained Models</a>
+    <a href="https://huggingface.co/M-CLIP">Pre-trained Models</a>
     ·
     <a href="https://github.com/FreddeFrallan/Contrastive-Tension/issues">Report Bug</a>
   </p>
 </p>
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb)
+
 
 <!-- ABOUT THE PROJECT -->
 ## Overview
-![Alt text](Swe-CLIP-Works.png?raw=true "Title")
+![Alt text](Multilingual-CLIP.png?raw=true "Title")
 
 [OpenAI](https://openai.com/) recently released the paper [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) in which they present the CLIP (Contrastive Language–Image Pre-training) model. This model is trained to connect text and images, by matching their corresponding vector representations using a contrastive learning objective.
 CLIP consists of two separate models, a visual encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. 
@@ -64,14 +66,14 @@ PT_model = transformers.AutoModel.from_pretrained('Contrastive-Tension/RoBerta-L
 ## Pre-trained Models
 Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top, available at [GoogleDrive](www.google.drive.com). We recommend downloading them seperatly to not struggre with Tensorflow/PyTorch versions. But for conveniance, the transformer and the linear layer can also be downloaded as a complete Tensorflow/PyTorch model directly from GoogleDrive aswell. <br> 
 
-| Link |Model Base| Pre-trained Languages | Fine-tuned Languages | #Parameters|
+| Name |Model Base| Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
-| Link | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
-| M-CLIP | [M-BERT Distil Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 40 Languages | 66 M|
-| Link | [M-BERT Base Uncased](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
-|**Single Language**    ||
-|Swe-CLIP| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)             | Swedish | Swedish | 110 M|
+|| [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 66 M|
+| [M-BERT Distil 40](https://huggingface.co/M-CLIP/M-BERT-Distil-40) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 40 Languages | 66 M|
+| | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)             | 101 Languages | 68 Languages | 110 M|
+|**Single**    ||
+|[Swe-CLIP 500k](https://huggingface.co/M-CLIP/Swedish-500k)| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)             | Swedish | Swedish | 110 M|
 
 ## Contribution
 If you have trained a CLIP Text encoder specific to your language, or another model covering a language not supported here, Please feel free to contact us and we will either upload your model and credit you, or simply link to your already uploaded model.
@@ -86,6 +88,7 @@ For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
 ## Acknowledgements
 * [Huggingface](https://huggingface.co/)
 * [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
+* ["Two Cats" Image by pl1602](https://search.creativecommons.org/photos/8dfd802b-58e5-4cc5-889d-96abba540de1)
 
 <!-- LICENSE -->
 ## License
