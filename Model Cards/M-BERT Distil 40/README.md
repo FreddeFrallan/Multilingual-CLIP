@@ -43,17 +43,17 @@ The second set included only images of fruits, and non-realistic photoshopped im
 The results depicted below are formatted so that each <b>column</b> represents the Softmax prediction over all the texts given the corresponding image. The images and matchings texts are ordered identically, hence a perfect solution would have 100 across the diagonal.
 
 #### French
-![Alt](./French-Both.png)
+![Alt](Images/French-Both.png)
 #### German
-![Alt](./German-Both.png)
+![Alt](Images/German-Both.png)
 #### Spanish
-![Alt](./Spanish-Both.png)
+![Alt](Images/Spanish-Both.png)
 #### Russian
-![Alt](./Russian-Both.png)
+![Alt](Images/Russian-Both.png)
 #### Swedish
-![Alt](./M-Swedish-Both.png)
+![Alt](Images/M-Swedish-Both.png)
 #### Greek
-![Alt](./Greek-Both.png)
+![Alt](Images/Greek-Both.png)
 #### Kannada
-![Alt](./Kannada-Both.png)
+![Alt](Images/Kannada-Both.png)
 
