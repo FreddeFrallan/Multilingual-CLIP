@@ -63,13 +63,13 @@ model_path = 'M-CLIP/M-BERT-Distil-40'
 tok_path = 'M-CLIP/M-BERT-Distil-40'
 head_weight_path = 'data/weights/M-BERT Distil 40 Linear Weights.pkl'
 
-sweclip_args = {'model_name': model_path,
+m_clip_args = {'model_name': model_path,
                 'tokenizer_name': tok_path,
                 'head_path': head_weight_path}
 
-sweclip = MultilingualClip(**sweclip_args)
+mCLIP = MultilingualClip(**sweclip_args)
 
-print(sweclip('test'))
+print(mCLIP('test'))
 ```
 
 For a more elaborative example see this [Google Colab](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
