@@ -39,6 +39,7 @@ The second set included only images of fruits, and non-realistic photoshoped ima
 * A bowl of fruits
 * A bunch of bananas hanging from a tree
 
+### Results
 The results depicted below are formated so that each <b>colum</b> represents the Softmax prediction over all the texts given the corresponding image. The images and matchings texts are ordered identicaly, hence a perfect solution would have 100 across the diagonal.
 
 #### French
