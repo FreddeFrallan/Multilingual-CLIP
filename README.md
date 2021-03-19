@@ -24,12 +24,11 @@ CLIP consists of two separate models, a visual encoder and a text encoder. These
 OpenAI has since released a set of their smaller CLIP models, which can be found on the [official CLIP Github](https://github.com/openai/CLIP).
 
 We propose a fine-tuning to replace the original English text encoder with a pre-trained text model in any language. This method makes it possible to adapt the powerful CLIP model to any language in roughly <b>24</b> GPU hours. <br>
- For more in-depth details see our work-in-progress [Arxiv paper](www.google.com).
 
 
 #### This repository contains
-* Pre-trained CLIP-Text encoders for multiple languages
 * Pytorch inference code
+* Pre-trained CLIP-Text encoders for multiple languages
 * Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
 
 ### Requirements
@@ -39,6 +38,10 @@ While it is possible that other versions works equally fine, we have worked with
 * Transformers = 4.1.1
 * Get weights for models
 ```bash
+
+<!-- USAGE EXAMPLES -->
+## Usage
+### Download CLIP & the Linear Weights
 $ bash get-weights.sh
 ```
 * CLIP
@@ -49,9 +52,8 @@ $ pip install git+https://github.com/openai/CLIP.git
 ```
 Replace `cudatoolkit=11.0` above with the appropriate CUDA version on your machine or `cpuonly` when installing on a machine without a GPU.
 
-<!-- USAGE EXAMPLES -->
-## Usage
 
+### Inference
 ```python
 import transformers
 
@@ -61,6 +63,7 @@ TF_model = transformers.TFAutoModel.from_pretrained('Contrastive-Tension/RoBerta
 PT_model = transformers.AutoModel.from_pretrained('Contrastive-Tension/RoBerta-Large-CT-STSb')
 ```
 
+For a more elaborative example see this [Google Colab](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
 
 <!-- GETTING STARTED -->
 ## Pre-trained Models
