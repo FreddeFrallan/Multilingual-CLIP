@@ -76,16 +76,16 @@ For a more elaborative example see this [Google Colab](https://colab.research.go
 
 <!-- GETTING STARTED -->
 ## Pre-trained Models
-Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top, available at [GoogleDrive](www.google.drive.com). We recommend downloading them seperatly to not struggre with Tensorflow/PyTorch versions. But for conveniance, the transformer and the linear layer can also be downloaded as a complete Tensorflow/PyTorch model directly from GoogleDrive aswell. <br> 
+Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. Neither of the models have been extensively tested, but for more information and qualitative test results for a specific model, click the Model Name to see its model card.
 
 | Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
 || [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)| RN50x4 | 101 Languages | 68 Languages | 66 M|
-| [M-BERT Distil 40](https://huggingface.co/M-CLIP/M-BERT-Distil-40) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | 101 Languages | 40 Languages | 66 M|
+| [M-BERT Distil 40](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | 101 Languages | 40 Languages | 66 M|
 | | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)|RN50x4 | 101 Languages | 68 Languages | 110 M|
 |**Monolingual**    ||
-|[Swe-CLIP 500k](https://huggingface.co/M-CLIP/Swedish-500k)| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | Swedish | Swedish | 110 M|
+|[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | Swedish | Swedish | 110 M|
 
 ## Contribution
 If you have trained a CLIP Text encoder specific to your language, or another model covering a language not supported here, Please feel free to contact us and we will either upload your model and credit you, or simply link to your already uploaded model.
