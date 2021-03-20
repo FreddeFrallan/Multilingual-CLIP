@@ -1,5 +1,3 @@
-### *** The documentation for this repostitory and models are currently a work in progress ***
-
 <br />
 <p align="center">
   <h1 align="center">Multilingual-CLIP</h1>
@@ -29,7 +27,7 @@ We propose a fine-tuning to replace the original English text encoder with a pre
 #### This repository contains
 * Pytorch inference code
 * Pre-trained CLIP-Text encoders for multiple languages
-* Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
+<!--- * Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/) --->
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
@@ -75,9 +73,9 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 | Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
-|| [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)| RN50x4 | 101 Languages | 68 Languages | 66 M|
-| [M-BERT Distil 40](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | 101 Languages | 40 Languages | 66 M|
-| | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)|RN50x4 | 101 Languages | 68 Languages | 110 M|
+|| [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)| RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 68 Languages | 66 M|
+| [M-BERT Distil 40](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+| | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)|RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 68 Languages | 110 M|
 |**Monolingual**    ||
 |[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | Swedish | Swedish | 110 M|
 
