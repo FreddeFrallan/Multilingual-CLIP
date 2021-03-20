@@ -20,7 +20,8 @@ All translation was done using the [AWS translate service](https://aws.amazon.co
 
 
 ## Evaluation
-A non-rigorous qualitative evaluation shows that for the languages French, German, Spanish, Russian, Swedish and Greek it seemingly yields respectable results for most instances. However, it was found that Kannada performed close to random, although it was included during fine-tuning.
+A non-rigorous qualitative evaluation shows that for the languages French, German, Spanish, Russian, Swedish and Greek it seemingly yields respectable results for most instances. The exception being that Greeks are apparently unable to recognize happy persons. <br>
+When testing on Kannada, a language which was included during pre-training but not fine-tuning, it performed close to random
 
 The qualitative test was organized into two sets of images and their corresponding text descriptions. The texts were manually translated into each different test languages, where the two sets include the following images:
 #### Set Nr 1
@@ -55,5 +56,6 @@ The results depicted below are formatted so that each <b>column</b> represents t
 #### Greek
 ![Alt](Images/Greek-Both.png)
 #### Kannada
+Kannada was <b>not included</b> in the 40 fine-tuning languages, but included during language modelling pre-training
 ![Alt](Images/Kannada-Both.png)
 
