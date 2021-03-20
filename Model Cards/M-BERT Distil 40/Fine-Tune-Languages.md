@@ -1,3 +1,5 @@
+### List of languages included during CLIP fine-tuning
+
 * Albanian
 * Amharic
 * Arabic
