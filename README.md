@@ -57,19 +57,15 @@ $ bash get-weights.sh
 
 ### Inference
 ```python
-from src.multilingual_clip import MultilingualClip
+from src import multilingual_clip
 
-model_path = 'M-CLIP/M-BERT-Distil-40'
-tok_path = 'M-CLIP/M-BERT-Distil-40'
-head_weight_path = 'data/weights/M-BERT Distil 40 Linear Weights.pkl'
+print(multilingual_clip.AVAILABLE_MODELS.keys())
 
-m_clip_args = {'model_name': model_path,
-                'tokenizer_name': tok_path,
-                'head_path': head_weight_path}
+model = multilingual_clip.load_model('M-BERT-Distil-40')
 
-mCLIP = MultilingualClip(**sweclip_args)
-
-print(mCLIP('test'))
+embeddings = model(['Älgen är skogens konung!', 'Wie leben Eisbären in der Antarktis?', 'Вы знали, что все белые медведи левши?'])
+print(embeddings.shape)
+# Yields: torch.Size([3, 640])
 ```
 
 For a more elaborative example see this [Google Colab](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
