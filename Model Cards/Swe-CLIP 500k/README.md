@@ -15,7 +15,7 @@ Once this is done, you can load and use the model with the following code
 ```python
 from src import multilingual_clip
 
-model = multilingual_clip.load_model('M-BERT-Distil-40')
+model = multilingual_clip.load_model('Swe-CLIP-500k')
 embeddings = model(['Älgen är skogens konung!', 'Alla isbjörnar är vänsterhänta'])
 print(embeddings.shape)
 # Yields: torch.Size([2, 640])
