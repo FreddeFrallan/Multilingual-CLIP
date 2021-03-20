@@ -5,11 +5,11 @@ import transformers
 
 
 class MultilingualClip(torch.nn.Module):
-    def __init__(self, model_name, tokenizer_name, head_path):
+    def __init__(self, model_name, tokenizer_name, head_name, weights_dir='data/weights/'):
         super().__init__()
         self.model_name = model_name
         self.tokenizer_name = tokenizer_name
-        self.head_path = head_path
+        self.head_path = weights_dir + head_name
 
         self.tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_name)
         self.transformer = transformers.AutoModel.from_pretrained(model_name)
@@ -28,3 +28,23 @@ class MultilingualClip(torch.nn.Module):
             lin_weights = pickle.loads(f.read())
         self.clip_head.weight = torch.nn.Parameter(torch.tensor(lin_weights[0]).float().t())
         self.clip_head.bias = torch.nn.Parameter(torch.tensor(lin_weights[1]).float())
+
+
+AVAILABLE_MODELS = {
+    'M-BERT-Distil-40': {
+        'model_name': 'M-CLIP/M-BERT-Distil-40',
+        'tokenizer_name': 'M-CLIP/M-BERT-Distil-40',
+        'head_name': 'M-BERT Distil 40 Linear Weights.pkl'
+    },
+
+    'Swe-CLIP-500k': {
+        'model_name': 'M-CLIP/Swedish-500k',
+        'tokenizer_name': 'M-CLIP/Swedish-500k',
+        'head_name': 'Swedish-500k Linear Weights.pkl'
+    }
+}
+
+
+def load_model(name):
+    config = AVAILABLE_MODELS[name]
+    return MultilingualClip(**config)
