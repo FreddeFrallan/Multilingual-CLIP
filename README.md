@@ -4,13 +4,15 @@
   <h3 align="center">OpenAI CLIP text encoders for any language</h3>
   
   <p align="center">  
+    <a href="https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb">Colab Notebook</a>
+    ·
     <a href="https://huggingface.co/M-CLIP">Pre-trained Models</a>
     ·
     <a href="https://github.com/FreddeFrallan/Contrastive-Tension/issues">Report Bug</a>
   </p>
 </p>
 
-<!--- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb) --->
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -65,6 +67,8 @@ print(embeddings.shape)
 ```
 
 <!--- For a more elaborative example see this [Google Colab](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb). --->
+
+For a more elaborate example, comparing the textual embeddings to the CLIP image embeddings see this [colab notebook](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
 
 <!-- GETTING STARTED -->
 ## Pre-trained Models
