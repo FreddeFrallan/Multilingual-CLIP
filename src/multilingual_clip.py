@@ -41,6 +41,12 @@ AVAILABLE_MODELS = {
         'model_name': 'M-CLIP/Swedish-500k',
         'tokenizer_name': 'M-CLIP/Swedish-500k',
         'head_name': 'Swedish-500k Linear Weights.pkl'
+    },
+
+    'Swe-CLIP-2M': {
+        'model_name': 'M-CLIP/Swedish-2M',
+        'tokenizer_name': 'M-CLIP/Swedish-2M',
+        'head_name': 'Swedish-2M Linear Weights.pkl'
     }
 }
 
