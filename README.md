@@ -73,6 +73,9 @@ For a more elaborate example, comparing the textual embeddings to the CLIP image
 <!-- GETTING STARTED -->
 ## Pre-trained Models
 Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. Neither of the models have been extensively tested, but for more information and qualitative test results for a specific model, click the Model Name to see its model card.
+<br>
+<br>
+<b>*** Make sure to update to the most recent version of the repostitory when downloading a new model, and re-run the shell script to download the Linear Weights. *** </b>
 
 | Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
