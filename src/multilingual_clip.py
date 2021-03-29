@@ -37,6 +37,12 @@ AVAILABLE_MODELS = {
         'head_name': 'M-BERT Distil 40 Linear Weights.pkl'
     },
 
+    'M-BERT-Base-69': {
+        'model_name': 'M-CLIP/M-BERT-Base-69',
+        'tokenizer_name': 'M-CLIP/M-BERT-Base-69',
+        'head_name': 'M-BERT-Base-69 Linear Weights.pkl'
+    },
+
     'Swe-CLIP-500k': {
         'model_name': 'M-CLIP/Swedish-500k',
         'tokenizer_name': 'M-CLIP/Swedish-500k',
