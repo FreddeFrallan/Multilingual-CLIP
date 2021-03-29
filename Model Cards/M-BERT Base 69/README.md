@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h1 align="center">M-BERT Distil 40</h1>
+  <h1 align="center">M-BERT Base 69</h1>
   
   <p align="center">  
     <a href="https://huggingface.co/M-CLIP/M-BERT-Base-69">Huggingface Model</a>
