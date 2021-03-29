@@ -80,9 +80,8 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 | Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
-|| [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)| RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 68 Languages | 66 M|
 | [M-BERT Distil 40](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040) | [M-BERT Distil](https://huggingface.co/bert-base-multilingual-uncased)|  RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
-| | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)|RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 68 Languages | 110 M|
+| [M-BERT Base 69](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Base%2069) | [M-BERT Base](https://huggingface.co/bert-base-multilingual-uncased)|RN50x4 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 68 Languages | 110 M|
 |**Monolingual**    ||
 |[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 |[Swe-CLIP 2M](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%202M)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
