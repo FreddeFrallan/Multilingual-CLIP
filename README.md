@@ -30,7 +30,7 @@ We propose a fine-tuning to replace the original English text encoder with a pre
 * Pytorch inference code
 * Tensorflow training code
 * Pre-trained CLIP-Text encoders for multiple languages
-* Training data and pre-computed CLIP text encodings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/) --->
+* Training data and pre-computed CLIP text encodings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
