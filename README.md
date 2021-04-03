@@ -96,7 +96,7 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 * Train a new CLIP-Text encoder via Teacher Learning 
 
 ### Pre-computed CLIP Embeddings & Translaton Data
-[This Google Drive folder](https://drive.google.com/drive/folders/1I9a7naSZubUATWzLFv61DQMWyFlF7wR5) contains both pre-computed CLIP-Text Embeddings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/).
+[This Google Drive folder]https://drive.google.com/drive/folders/1I9a7naSZubUATWzLFv61DQMWyFlF7wR5?usp=sharing) contains both pre-computed CLIP-Text Embeddings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/).
 
 The Google Drive folder also contains the translation data used to train the currently available models.
 Good Luck
