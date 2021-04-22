@@ -55,7 +55,7 @@ AVAILABLE_MODELS = {
         'head_name': 'Swedish-2M Linear Weights.pkl'
     },
     
-    'M-BERT-Base-VIT': {
+    'M-BERT-Base-ViT-B': {
         'model_name': 'M-CLIP/M-BERT-Base-ViT-B',
         'tokenizer_name': 'M-CLIP/M-BERT-Base-ViT-B',
         'head_name': 'M-BERT-Base-69-ViT Linear Weights.pkl'
