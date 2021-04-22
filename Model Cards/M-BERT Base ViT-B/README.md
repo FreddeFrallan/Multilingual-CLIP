@@ -3,7 +3,7 @@
   <h1 align="center">M-BERT Base 69</h1>
   
   <p align="center">  
-    <a href="https://huggingface.co/M-CLIP/M-BERT-Base-69">Huggingface Model</a>
+    <a href="https://huggingface.co/M-CLIP/M-BERT-Base-ViT-B">Huggingface Model</a>
     ·
     <a href="https://huggingface.co/bert-base-multilingual-cased">Huggingface Base Model</a>
   </p>
@@ -15,7 +15,7 @@ Once this is done, you can load and use the model with the following code
 ```python
 from src import multilingual_clip
 
-model = multilingual_clip.load_model('M-BERT-Base-69')
+model = multilingual_clip.load_model('M-BERT-Base-ViT-B')
 embeddings = model(['Älgen är skogens konung!', 'Wie leben Eisbären in der Antarktis?', 'Вы знали, что все белые медведи левши?'])
 print(embeddings.shape)
 # Yields: torch.Size([3, 640])
