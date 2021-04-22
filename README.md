@@ -28,8 +28,9 @@ We propose a fine-tuning to replace the original English text encoder with a pre
 
 #### This repository contains
 * Pytorch inference code
+* Tensorflow training code
 * Pre-trained CLIP-Text encoders for multiple languages
-<!--- * Training data and ~3M pre-computed CLIP text encodings for the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/) --->
+* Training data and pre-computed CLIP text encodings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
@@ -85,6 +86,20 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 |**Monolingual**    ||
 |[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 |[Swe-CLIP 2M](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%202M)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
+
+## Training a new model
+[This folder](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/src/TeacherLearning) contains the code used for training the above models. If you wsh to train your own model you must do the following things:
+
+* Prepare a set of translated sentence pairs from English -> Your Language(s)
+* Compute regular CLIP-Text embeddings for the English sentences.
+* Edit [Training.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/src/TeacherLearning/Training.py) to load your data.
+* Train a new CLIP-Text encoder via Teacher Learning 
+
+### Pre-computed CLIP Embeddings & Translaton Data
+[This Google Drive folder]https://drive.google.com/drive/folders/1I9a7naSZubUATWzLFv61DQMWyFlF7wR5?usp=sharing) contains both pre-computed CLIP-Text Embeddings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/).
+
+The Google Drive folder also contains the translation data used to train the currently available models.
+Good Luck
 
 ## Contribution
 If you have trained a CLIP Text encoder specific to your language, or another model covering a language not supported here, Please feel free to contact us and we will either upload your model and credit you, or simply link to your already uploaded model.
