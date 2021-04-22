@@ -16,3 +16,5 @@ wget -c "${URLMCLIP}" -P $OUTPATH
 URLMCLIPBASE=https://www.dropbox.com/s/y4pycinv0eapeb3/M-BERT-Base-69%20Linear%20Weights.pkl
 wget -c "${URLMCLIPBASE}" -P $OUTPATH
 
+URLMCLIPBASEVIT=https://www.dropbox.com/s/2oxu7hw0y9fwdqs/M-BERT-Base-69-ViT%20Linear%20Weights.pkl
+wget -c "${URLMCLIPBASEVIT}" -P $OUTPATH
