@@ -79,7 +79,6 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 <b>*** Make sure to update to the most recent version of the repostitory when downloading a new model, and re-run the shell script to download the Linear Weights. *** </b>
 
 
-M-BERT-Base-ViT-B
 | Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
 |**Multilingual**    ||
