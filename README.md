@@ -110,7 +110,7 @@ If you have trained a CLIP Text encoder specific to your language, or another mo
 ## Contact
 If you have questions regarding the code or otherwise related to this Github page, please open an [issue](https://github.com/FreddeFrallan/Contrastive-Tension/issues).
 
-For other purposes, feel free to contact me directly at: Fredrk.Carlsson@ri.se
+For other purposes, feel free to contact me directly at: Fredrik.Carlsson@ri.se
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
