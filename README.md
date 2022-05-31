@@ -71,7 +71,12 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 | [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
 
 
-## Legacy Usage
+## Legacy Usage and Models
+Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them incorporated in the Huggingface repository. More information about these models can be found in this section. 
+
+<details>
+  <summary>Click for more information</summary>
+  
 ##### Download CLIP Model
 ```bash
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
@@ -83,7 +88,7 @@ For more information please see the official [CLIP repostitory](https://github.c
 ##### Download Linear Weights
 ```bash
 # Linear Model Weights
-$ bash get-weights.sh
+$ bash legacy_get-weights.sh
 ```
 
 ### Inference
@@ -121,6 +126,8 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 |[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 |[Swe-CLIP 2M](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%202M)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 
+  </details>
+  
 ## Training a new model
 [This folder](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/src/TeacherLearning) contains the code used for training the above models. If you wsh to train your own model you must do the following things:
 
