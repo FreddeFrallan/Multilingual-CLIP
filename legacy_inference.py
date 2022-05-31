@@ -1,4 +1,4 @@
-from src.multilingual_clip import MultilingualClip
+from src.legacy_multilingual_clip import MultilingualClip
 
 model_path = 'M-CLIP/Swedish-500k'
 tok_path = 'M-CLIP/Swedish-500k'
