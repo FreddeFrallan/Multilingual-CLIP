@@ -69,6 +69,8 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 | [XLM-R Large Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | 768 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages)|  66 M|
 | [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | 640 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages)| 66 M|
 
+### Training & Validation Curves
+The training curves for these models are available at this [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP?workspace=user-freddefrallan).
 
 ## Legacy Usage and Models
 Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them directly incorporated in the Huggingface repository. More information about these older models can be found in this section. 
