@@ -62,17 +62,16 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 <br>
 <br>
 
-| Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
-| ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
-|**Multilingual**    ||
-| [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-B/32](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
-| [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| [LaBSE](https://huggingface.co/sentence-transformers/LaBSE)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
-| [XLM-R Large Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
-| [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+| Name |Model Base|Vision Model | Vision Dimensions | Pre-trained Languages | #Parameters|
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: | :-----: |
+| [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-B/32](https://github.com/openai/CLIP) | 512 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 66 M|
+| [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| [LaBSE](https://huggingface.co/sentence-transformers/LaBSE)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | 768 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | 66 M|
+| [XLM-R Large Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | 768 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages)|  66 M|
+| [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | 640 | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages)| 66 M|
 
 
 ## Legacy Usage and Models
-Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them incorporated in the Huggingface repository. More information about these models can be found in this section. 
+Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them directly incorporated in the Huggingface repository. More information about these older models can be found in this section. 
 
 <details>
   <summary>Click for more information</summary>
