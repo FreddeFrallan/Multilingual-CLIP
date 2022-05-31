@@ -27,19 +27,51 @@ We propose a fine-tuning to replace the original English text encoder with a pre
 
 
 #### This repository contains
-* Pytorch inference code
-* Tensorflow training code
 * Pre-trained CLIP-Text encoders for multiple languages
-* Training data and pre-computed CLIP text encodings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
+* Pytorch & Tensorflow inference code
+* Tensorflow training code
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
 
 * Python = 3.6.9
-* Transformers = 4.1.1
-* Model Weights
+* Transformers = 4.8.1
 
-## Usage
+## Inference Example
+Inference code for Tensorflow is also available in [inference_example.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/inference_example.py)
+```python
+from src import pt_multilingual_clip
+
+exampleTexts = [
+    'Three blind horses listening to Mozart.',
+    'Älgen är skogens konung!',
+    'Wie leben Eisbären in der Antarktis?',
+    'Вы знали, что все белые медведи левши?'
+]
+model_name = 'M-CLIP/XLM-Roberta-Large-Vit-L-14'
+
+# Load Model & Tokenizer
+model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(model_name)
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+
+embeddings = model.forward(texts, tokenizer)
+print(embeddings.shape)
+```
+## Pre-trained Models
+Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. For more information of a specific model, click the Model Name to see its model card.
+<br>
+<br>
+
+| Name |Model Base|Vision Model | Pre-trained Languages | Target Languages | #Parameters|
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: |:-----: |
+|**Multilingual**    ||
+| [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-B/32](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+| [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| [LaBSE](https://huggingface.co/sentence-transformers/LaBSE)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+| [XLM-R Large Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+| [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | [101 Languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages) | [40 Languages](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/Model%20Cards/M-BERT%20Distil%2040/Fine-Tune-Languages.md) | 66 M|
+
+
+## Legacy Usage
 ##### Download CLIP Model
 ```bash
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
@@ -72,7 +104,7 @@ print(embeddings.shape)
 For a more elaborate example, comparing the textual embeddings to the CLIP image embeddings see this [colab notebook](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
 
 <!-- GETTING STARTED -->
-## Pre-trained Models
+## Legacy Pre-trained Models
 Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. Neither of the models have been extensively tested, but for more information and qualitative test results for a specific model, click the Model Name to see its model card.
 <br>
 <br>
