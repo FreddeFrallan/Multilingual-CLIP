@@ -2,7 +2,7 @@ import transformers
 
 
 def tf_example(texts, model_name='M-CLIP/XLM-Roberta-Large-Vit-L-14'):
-    import tf_multilingual_clip
+    from mclip import tf_multilingual_clip
 
     model = tf_multilingual_clip.MultiLingualCLIP.from_pretrained(model_name)
     tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
@@ -13,7 +13,7 @@ def tf_example(texts, model_name='M-CLIP/XLM-Roberta-Large-Vit-L-14'):
 
 
 def pt_example(texts, model_name='M-CLIP/XLM-Roberta-Large-Vit-L-14'):
-    import pt_multilingual_clip
+    from mclip import pt_multilingual_clip
 
     model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(model_name)
     tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)

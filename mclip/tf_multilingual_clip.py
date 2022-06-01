@@ -1,4 +1,4 @@
-from src import Config_MCLIP
+from mclip import Config_MCLIP
 import tensorflow as tf
 import transformers
 
