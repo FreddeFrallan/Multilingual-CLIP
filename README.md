@@ -23,23 +23,68 @@
 CLIP consists of two separate models, a visual encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. 
 OpenAI has since released a set of their smaller CLIP models, which can be found on the [official CLIP Github](https://github.com/openai/CLIP).
 
-We propose a fine-tuning to replace the original English text encoder with a pre-trained text model in any language. This method makes it possible to adapt the powerful CLIP model to any language in roughly <b>24</b> GPU hours. <br>
-
 
 #### This repository contains
-* Pytorch inference code
-* Tensorflow training code
 * Pre-trained CLIP-Text encoders for multiple languages
-* Training data and pre-computed CLIP text encodings for a large porton of the the image captions of [GCC](https://ai.google.com/research/ConceptualCaptions/) + [MSCOCO](https://cocodataset.org/#home) + [VizWiz](https://vizwiz.org/tasks-and-datasets/image-captioning/)
+* Pytorch & Tensorflow inference code
+* Tensorflow training code
 
 ### Requirements
 While it is possible that other versions works equally fine, we have worked with the following:
 
 * Python = 3.6.9
-* Transformers = 4.1.1
-* Model Weights
+* Transformers = 4.8.1
 
-## Usage
+## Inference Example
+Inference code for Tensorflow is also available in [inference_example.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/inference_example.py)
+```python
+from src import pt_multilingual_clip
+
+exampleTexts = [
+    'Three blind horses listening to Mozart.',
+    'Älgen är skogens konung!',
+    'Wie leben Eisbären in der Antarktis?',
+    'Вы знали, что все белые медведи левши?'
+]
+model_name = 'M-CLIP/XLM-Roberta-Large-Vit-L-14'
+
+# Load Model & Tokenizer
+model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(model_name)
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+
+embeddings = model.forward(texts, tokenizer)
+print(embeddings.shape)
+```
+## Pre-trained Models
+Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. For more information of a specific model, click the Model Name to see its model card.
+<br>
+<br>
+
+| Name |Model Base|Vision Model | Vision Dimensions | Pre-trained Languages | #Parameters|
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: | :-----: |
+| [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| [LaBSE](https://huggingface.co/sentence-transformers/LaBSE)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | 768 | [109 Languages](https://arxiv.org/pdf/2007.01852.pdf) | 110 M|
+| [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-B/32](https://github.com/openai/CLIP) | 512 | [100 Languages](https://github.com/facebookresearch/fairseq/tree/main/examples/xlmr#Introduction) | 344 M|
+| [XLM-R Large Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [OpenAI ViT-L/14](https://github.com/openai/CLIP) | 768 | [100 Languages](https://github.com/facebookresearch/fairseq/tree/main/examples/xlmr#Introduction)|  344 M|
+| [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| [XLM-Roberta-Large](https://huggingface.co/xlm-roberta-large)|  [Open CLIP ViT-B-16-plus-240](https://github.com/mlfoundations/open_clip) | 640 | [100 Languages](https://github.com/facebookresearch/fairseq/tree/main/examples/xlmr#Introduction)| 344 M|
+
+### Validation & Training Curves
+Following is a table of the <b>Txt2Img @10-Recal</b> for the humanly tanslated [MS-COCO testset](https://arxiv.org/abs/2109.07622).
+
+| Name | En | De | Es | Fr | Zh | It | Pl | Ko | Ru | Tr | Jp |
+| ----------------------------------|:-----: |:-----: |:-----: |:-----: | :-----: |:-----: |:-----: |:-----: |:-----: |:-----: |:-----: |
+| [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| 91.6 | 89.6 | 89.5 | 89.9 | 88.9 | 90.1 | 89.8 | 80.8 | 85.5 | 89.8 | 73.9 |
+| [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| 91.8 | 88.7 | 89.1 | 89.4 | 89.3 | 89.8| 91.4 | 82.1 | 86.1 | 88.8 | 81.0 |
+| [XLM-R Vit-L/14](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/M-BERT%20Distil%2040)| 92.4 | 90.6 | 91.0 | 90.0 | 89.7 | 91.1 | 91.3 | 85.2 | 85.8 | 90.3 | 81.9 |
+| [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| <b>95.0</b> | <b>93.0</b> | <b>93.6</b> | <b>93.1</b> | <b>94.0</b> | <b>93.1</b> | <b>94.4</b> | <b>89.0</b> | <b>90.0</b> | <b>93.0</b> | <b>84.2</b> |
+
+The training curves for these models are available at this [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP?workspace=user-freddefrallan).
+
+## Legacy Usage and Models
+Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them directly incorporated in the Huggingface repository. More information about these older models can be found in this section. 
+
+<details>
+  <summary>Click for more information</summary>
+  
 ##### Download CLIP Model
 ```bash
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
@@ -51,7 +96,7 @@ For more information please see the official [CLIP repostitory](https://github.c
 ##### Download Linear Weights
 ```bash
 # Linear Model Weights
-$ bash get-weights.sh
+$ bash legacy_get-weights.sh
 ```
 
 ### Inference
@@ -72,7 +117,7 @@ print(embeddings.shape)
 For a more elaborate example, comparing the textual embeddings to the CLIP image embeddings see this [colab notebook](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb).
 
 <!-- GETTING STARTED -->
-## Pre-trained Models
+## Legacy Pre-trained Models
 Every text encoder is a [Huggingface](https://huggingface.co/) available transformer, with an additional linear layer on top. Neither of the models have been extensively tested, but for more information and qualitative test results for a specific model, click the Model Name to see its model card.
 <br>
 <br>
@@ -89,6 +134,8 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
 |[Swe-CLIP 500k](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%20500k)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 |[Swe-CLIP 2M](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/Model%20Cards/Swe-CLIP%202M)| [KB-BERT](https://huggingface.co/KB/bert-base-swedish-cased)|  RN50x4 | Swedish | Swedish | 110 M|
 
+  </details>
+  
 ## Training a new model
 [This folder](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/src/TeacherLearning) contains the code used for training the above models. If you wsh to train your own model you must do the following things:
 
