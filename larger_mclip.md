@@ -19,6 +19,10 @@ Following is short list of some of the shared hyperparameters:
 
 All models were allowed to train until the validation mse loss had converged. For most models this took about 24 hours, using 8 Nvidia A-100 GPUs. No early stopping was performed in regards to the Image-Text retrieval tasks.
 
+## Evaluation results
+
+see https://github.com/FreddeFrallan/Multilingual-CLIP#validation--training-curves
+
 ## Additional Experiments
 In addition to the released models we also performed some experiments that yielded negative, or unsubstantal results. The training curves and specific settings for most of these additional experiments can be found at the [Additional weights and biases](https://wandb.ai/freddefrallan/M-CLIP?workspace=user-freddefrallan).
 
