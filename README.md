@@ -37,7 +37,7 @@ While it is possible that other versions works equally fine, we have worked with
 
 ## Install
 
-`pip install m-clip torch`
+`pip install multilingual-clip torch`
 
 You can also choose to `pip install tensorflow` instead of torch.
 
