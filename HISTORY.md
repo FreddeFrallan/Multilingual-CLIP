@@ -1,3 +1,7 @@
+## 1.0.10
+
+* it works
+
 ## 1.0.8
 
 * small fix

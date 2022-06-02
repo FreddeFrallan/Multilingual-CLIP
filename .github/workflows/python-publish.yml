@@ -20,8 +20,8 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        python -m pip install pip==22.1.1
-        pip install setuptools wheel twine==4.0.0
+        python -m pip install pip
+        pip install setuptools wheel twine
     - name: Release
       if: ${{ steps.regex-match.outputs.match != '' }}
       uses: softprops/action-gh-release@v1
