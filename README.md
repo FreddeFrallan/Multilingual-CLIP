@@ -47,7 +47,7 @@ You can also choose to `pip install tensorflow` instead of torch.
 Inference code for Tensorflow is also available in [inference_example.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/inference_example.py)
 
 ```python
-from mclip import pt_multilingual_clip
+from multilingual_clip import pt_multilingual_clip
 import transformers
 
 texts = [
@@ -124,7 +124,7 @@ $ bash legacy_get-weights.sh
 
 ### Inference
 ```python
-from mclip import multilingual_clip
+from multilingual_clip import multilingual_clip
 
 print(multilingual_clip.AVAILABLE_MODELS.keys())
 
@@ -160,11 +160,11 @@ Every text encoder is a [Huggingface](https://huggingface.co/) available transfo
   </details>
   
 ## Training a new model
-[This folder](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/mclip/TeacherLearning) contains the code used for training the above models. If you wsh to train your own model you must do the following things:
+[This folder](https://github.com/FreddeFrallan/Multilingual-CLIP/tree/main/multilingual_clip/TeacherLearning) contains the code used for training the above models. If you wsh to train your own model you must do the following things:
 
 * Prepare a set of translated sentence pairs from English -> Your Language(s)
 * Compute regular CLIP-Text embeddings for the English sentences.
-* Edit [Training.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/mclip/TeacherLearning/Training.py) to load your data.
+* Edit [Training.py](https://github.com/FreddeFrallan/Multilingual-CLIP/blob/main/multilingual_clip/TeacherLearning/Training.py) to load your data.
 * Train a new CLIP-Text encoder via Teacher Learning 
 
 ### Pre-computed CLIP Embeddings & Translaton Data

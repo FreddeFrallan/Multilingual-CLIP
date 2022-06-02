@@ -1,4 +1,4 @@
-from mclip import Config_MCLIP
+from multilingual_clip import Config_MCLIP
 import transformers
 import torch
 

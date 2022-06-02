@@ -8,4 +8,4 @@
 
 ## 1.0.0
 
-* first pypi release of mclip
+* first pypi release of multilingual_clip

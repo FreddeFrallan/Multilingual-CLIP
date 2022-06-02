@@ -13,7 +13,7 @@
 To use this model along with the original CLIP vision encoder follow the [main page usage instructions](https://github.com/FreddeFrallan/Multilingual-CLIP) to download the additional linear weights.
 Once this is done, you can load and use the model with the following code
 ```python
-from mclip import multilingual_clip
+from multilingual_clip import multilingual_clip
 
 model = multilingual_clip.load_model('M-BERT-Base-ViT-B')
 embeddings = model(['Älgen är skogens konung!', 'Wie leben Eisbären in der Antarktis?', 'Вы знали, что все белые медведи левши?'])
