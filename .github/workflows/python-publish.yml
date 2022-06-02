@@ -20,7 +20,7 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install pip==22.1.1
         pip install setuptools wheel twine==4.0.0
     - name: Release
       if: ${{ steps.regex-match.outputs.match != '' }}
