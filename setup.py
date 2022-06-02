@@ -17,7 +17,7 @@ if __name__ == "__main__":
         name="multilingual-clip",
         packages=find_packages(),
         include_package_data=True,
-        version="1.0.1",
+        version="1.0.2",
         license="MIT",
         description="OpenAI CLIP text encoders for multiple languages!",
         long_description=long_description,
