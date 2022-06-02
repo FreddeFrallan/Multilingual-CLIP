@@ -3,7 +3,7 @@
 ## Overview
 Recently, OpenAI released some of their [bigger CLIP models](https://github.com/openai/CLIP/blob/main/model-card.md). Additionally, [OpenCLIP](https://github.com/mlfoundations/open_clip) is continuing to provide their large models, which have proven to match or even outperform the OpenAI models.
 
-Thanks to the compute provided by [Stability.ai](https://stability.ai/), we are now happy to announce that we provide multilingual text encoders for these models!
+Thanks to the compute provided by [Stability.ai](https://stability.ai/) and [laion.ai](https://laion.ai/), we are now happy to announce that we provide multilingual text encoders for these models!
 Along with:
  - Updated Inference & Training Code
  - The Corresponding Machine Translated Image Caption Dataset
@@ -23,6 +23,8 @@ None of the M-CLIP models have been extensivly evaluated, but testing them on Tx
 | [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| <b>95.0</b> | <b>93.0</b> | <b>93.6</b> | <b>93.1</b> | <b>94.0</b> | <b>93.1</b> | <b>94.4</b> | <b>89.0</b> | <b>90.0</b> | <b>93.0</b> | <b>84.2</b> |
 
 To our surprise, using M-CLIP with XLM-RoBerta Large outperforms the original English models for English. Exactly why this is the case reamins to be determined, and we plan to followup up with more extensive testing.
+
+The ViT-L/14 model is integrated into clip retrieval, you can test the retrieval capabilities of this multilingual encoder [there](https://rom1504.github.io/clip-retrieval/?useMclip=true&query=%E9%BB%84%E8%89%B2%E3%81%84%E7%8C%AB). This is a search over 5 billion of clip embeddings of laion5B dataset implemented with an efficient knn index.
 
 ## Training Data & Machine Translation
 English image captions were taken from the Vit-L filtered captions of the datasets: [CC3M+CC12M+SBU](https://github.com/salesforce/BLIP#pre-training-datasets-download), which are provided by the BLIP repository.
