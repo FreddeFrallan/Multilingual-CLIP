@@ -14,7 +14,7 @@ if __name__ == "__main__":
     REQUIREMENTS = _read_reqs("requirements.txt")
 
     setup(
-        name="mclip",
+        name="m-clip",
         packages=find_packages(),
         include_package_data=True,
         version="1.0.0",
