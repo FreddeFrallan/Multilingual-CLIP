@@ -1,3 +1,7 @@
+## 1.0.3
+
+* rename all mentions to multilingual_clip
+
 ## 1.0.2
 
 * Multilingual-clip 
