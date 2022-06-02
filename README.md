@@ -13,6 +13,7 @@
 </p>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb)
+[![pypi](https://img.shields.io/pypi/v/multilingual-clip.svg)](https://pypi.python.org/pypi/multilingual-clip)
 
 
 <!-- ABOUT THE PROJECT -->
