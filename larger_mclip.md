@@ -3,7 +3,7 @@
 ## Overview
 Recently, OpenAI released some of their [bigger CLIP models](https://github.com/openai/CLIP/blob/main/model-card.md). Additionally, [OpenCLIP](https://github.com/mlfoundations/open_clip) is continuing to provide their large models, which have proven to match or even outperform the OpenAI models.
 
-We are now happy to announce that we provide Multilingual text encoders for these models!
+Thanks to the compute provided by [Stability.ai](https://stability.ai/), we are now happy to announce that we provide multilingual text encoders for these models!
 Along with:
  - Updated Inference & Training Code
  - The Corresponding Machine Translated Image Caption Dataset
@@ -16,6 +16,7 @@ None of the M-CLIP models have been extensivly evaluated, but testing them on Tx
 | ----------------------------------|:-----: |:-----: |:-----: |:-----: | :-----: |:-----: |:-----: |:-----: |:-----: |:-----: |:-----: |
 | [OpenAI CLIP Vit-B/32](https://github.com/openai/CLIP)| 90.3 | - | - | - | - | - | - | - | - | - | - |
 | [OpenAI CLIP Vit-L/14](https://github.com/openai/CLIP)| 91.8 | - | - | - | - | - | - | - | - | - | - |
+| [OpenCLIP ViT-B-16+-](https://github.com/openai/CLIP)| 94.3 | - | - | - | - | - | - | - | - | - | - |
 | [LABSE Vit-L/14](https://huggingface.co/M-CLIP/LABSE-Vit-L-14)| 91.6 | 89.6 | 89.5 | 89.9 | 88.9 | 90.1 | 89.8 | 80.8 | 85.5 | 89.8 | 73.9 |
 | [XLM-R Large Vit-B/32](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-32)| 91.8 | 88.7 | 89.1 | 89.4 | 89.3 | 89.8| 91.4 | 82.1 | 86.1 | 88.8 | 81.0 |
 | [XLM-R Vit-L/14](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-L-14)| 92.4 | 90.6 | 91.0 | 90.0 | 89.7 | 91.1 | 91.3 | 85.2 | 85.8 | 90.3 | 81.9 |
