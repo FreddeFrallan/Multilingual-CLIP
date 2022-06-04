@@ -188,6 +188,7 @@ For other purposes, feel free to contact me directly at: Fredrik.Carlsson@ri.se
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+* [Stability.ai](https://stability.ai/) for providing much appreciated compute during training.
 * [CLIP](https://openai.com/blog/clip/)
 * [OpenAI](https://openai.com/)
 * [Huggingface](https://huggingface.co/)
