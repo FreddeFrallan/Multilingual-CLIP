@@ -4,7 +4,7 @@
   <h3 align="center">OpenAI CLIP text encoders for any language</h3>
   
   <p align="center">  
-    <a href="https://colab.research.google.com/github/FreddeFrallan/Multilingual-CLIP/blob/master/Multilingual_CLIP.ipynb">Colab Notebook</a>
+    <a href="https://rom1504.github.io/clip-retrieval/?back=https%3A%2F%2Fknn5.laion.ai&index=laion_400m&useMclip=true">Live Demo</a>
     ·
     <a href="https://huggingface.co/M-CLIP">Pre-trained Models</a>
     ·
