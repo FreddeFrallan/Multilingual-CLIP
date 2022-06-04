@@ -24,6 +24,8 @@
 CLIP consists of two separate models, a visual encoder and a text encoder. These were trained on a wooping 400 Million images and corresponding captions. 
 OpenAI has since released a set of their smaller CLIP models, which can be found on the [official CLIP Github](https://github.com/openai/CLIP).
 
+## Demo
+A live demonstration of multilingual text-image retrieval using M-CLIP can be found [here!](https://rom1504.github.io/clip-retrieval/?back=https%3A%2F%2Fknn5.laion.ai&index=laion_400m&useMclip=true). This demo was created by [Rom1504](https://github.com/rom1504), and it allows you to search LAION-400M dataset in various languages using M-CLIP.
 
 #### This repository contains
 * Pre-trained CLIP-Text encoders for multiple languages
