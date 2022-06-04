@@ -102,7 +102,7 @@ Following is a table of the <b>Txt2Img @10-Recal</b> for the humanly tanslated [
 | [XLM-R Vit-L/14](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-L-14)| 92.4 | 90.6 | 91.0 | 90.0 | 89.7 | 91.1 | 91.3 | 85.2 | 85.8 | 90.3 | 81.9 |
 | [XLM-R Large Vit-B/16+](https://huggingface.co/M-CLIP/XLM-Roberta-Large-Vit-B-16Plus)| <b>95.0</b> | <b>93.0</b> | <b>93.6</b> | <b>93.1</b> | <b>94.0</b> | <b>93.1</b> | <b>94.4</b> | <b>89.0</b> | <b>90.0</b> | <b>93.0</b> | <b>84.2</b> |
 
-The training curves for these models are available at this [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP?workspace=user-freddefrallan).
+The training curves for these models are available at this [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP/reports/M-CLIP-2-6-2022--VmlldzoyMTE1MjIz/edit?firstReport&runsetFilter).
 
 ## Legacy Usage and Models
 Older versions of M-CLIP had the linear weights stored separately from Huggingface. Whilst the new models have them directly incorporated in the Huggingface repository. More information about these older models can be found in this section. 
