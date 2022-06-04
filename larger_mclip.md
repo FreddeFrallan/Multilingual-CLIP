@@ -26,6 +26,8 @@ To our surprise, using M-CLIP with XLM-RoBerta Large outperforms the original En
 
 The ViT-L/14 model is integrated into clip retrieval, you can test the retrieval capabilities of this multilingual encoder [there](https://rom1504.github.io/clip-retrieval/?useMclip=true&query=%E9%BB%84%E8%89%B2%E3%81%84%E7%8C%AB). This is a search over 5 billion of clip embeddings of laion5B dataset implemented with an efficient knn index.
 
+The training curves for these models can be found at the [Weights and Biases report](https://wandb.ai/freddefrallan/M-CLIP/reports/M-CLIP-2-6-2022--VmlldzoyMTE1MjU1/edit?firstReport&runsetFilter)
+
 ## Training Data & Machine Translation
 English image captions were taken from the Vit-L filtered captions of the datasets: [CC3M+CC12M+SBU](https://github.com/salesforce/BLIP#pre-training-datasets-download), which are provided by the BLIP repository.
 
@@ -37,7 +39,7 @@ Each translation was performed with the corresponding Opus model. For more infor
 It should be noted that only translated captions were used during training. Meaning that none of the original English captions were included. This entails that all the English (and other languages not included in the 49 target languages) results are due to transfer learning.
 
 ## Training Details
-All released models used in essence the same hyperparameters. These details, along with the corresponding training curves are available at [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP/reports/M-CLIP-2-6-2022--VmlldzoyMTE1MjIz/edit?firstReport&runsetFilter).
+All released models used in essence the same hyperparameters. These detail are available at [Weights and Biases project](https://wandb.ai/freddefrallan/M-CLIP?workspace=user-freddefrallan).
 
 Following is a short list of some of the shared hyperparameters:
  - Batch size of 2048 samples.
@@ -47,7 +49,7 @@ Following is a short list of some of the shared hyperparameters:
 All models were allowed to train until the validation MSE loss had converged. For most models this took about 24 hours, using 8 Nvidia A-100 GPUs. No early stopping was performed in regard to the Image-Text retrieval tasks.
 
 ## Additional Experiments
-In addition to the released models, we also performed some experiments that yielded negative or unsubstantial results. The training curves and specific settings for most of these additional experiments can be found at the [Additional weights and biases](https://wandb.ai/freddefrallan/M-CLIP?workspace=user-freddefrallan).
+In addition to the released models, we also performed some experiments that yielded negative or unsubstantial results. The training curves and specific settings for most of these additional experiments can be found at the [Weights and Biases project](https://wandb.ai/freddefrallan/M-CLIP?workspace=user-freddefrallan).
 
 Following is a summary of things we tried:
 
