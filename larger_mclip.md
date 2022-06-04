@@ -37,7 +37,7 @@ Each translation was performed with the corresponding Opus model. For more infor
 It should be noted that only translated captions were used during training. Meaning that none of the original English captions were included. This entails that all the English (and other languages not included in the 49 target languages) results are due to transfer learning.
 
 ## Training Details
-All released models used in essence the same hyperparameters. These details, along with the corresponding training curves are available at [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP).
+All released models used in essence the same hyperparameters. These details, along with the corresponding training curves are available at [Weights and Biases](https://wandb.ai/freddefrallan/Multilingual-CLIP/reports/M-CLIP-2-6-2022--VmlldzoyMTE1MjIz/edit?firstReport&runsetFilter).
 
 Following is a short list of some of the shared hyperparameters:
  - Batch size of 2048 samples.
