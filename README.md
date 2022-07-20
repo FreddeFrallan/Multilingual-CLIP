@@ -199,6 +199,25 @@ For other purposes, feel free to contact me directly at: Fredrik.Carlsson@ri.se
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
 
+<!-- CITATION -->
+## Citing
+If you found this repository useful, please consider citing:
+
+```bibtex
+@InProceedings{carlsson-EtAl:2022:LREC,
+  author    = {Carlsson, Fredrik  and  Eisen, Philipp  and  Rekathati, Faton  and  Sahlgren, Magnus},
+  title     = {Cross-lingual and Multilingual CLIP},
+  booktitle      = {Proceedings of the Language Resources and Evaluation Conference},
+  month          = {June},
+  year           = {2022},
+  address        = {Marseille, France},
+  publisher      = {European Language Resources Association},
+  pages     = {6848--6854},
+  abstract  = {The long-standing endeavor of relating the textual and the visual domain recently underwent a pivotal breakthrough, as OpenAI released CLIP. This model distinguishes how well an English text corresponds with a given image with unprecedented accuracy. Trained via a contrastive learning objective over a huge dataset of 400M of images and captions, it is a work that is not easily replicated, especially for low resource languages. Capitalizing on the modularization of the CLIP architecture, we propose to use cross-lingual teacher learning to re-train the textual encoder for various non-English languages. Our method requires no image data and relies entirely on machine translation which removes the need for data in the target language. We find that our method can efficiently train a new textual encoder with relatively low computational cost, whilst still outperforming previous baselines on multilingual image-text retrieval.},
+  url       = {https://aclanthology.org/2022.lrec-1.739}
+}
+```
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
