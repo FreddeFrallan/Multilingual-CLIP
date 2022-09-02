@@ -5,14 +5,14 @@ import transformers
 
 
 class MultilingualClip(torch.nn.Module):
-    def __init__(self, model_name, tokenizer_name, head_name, weights_dir='data/weights/'):
+    def __init__(self, model_name, tokenizer_name, head_name, weights_dir='data/weights/', cache_dir=None):
         super().__init__()
         self.model_name = model_name
         self.tokenizer_name = tokenizer_name
         self.head_path = weights_dir + head_name
 
-        self.tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_name)
-        self.transformer = transformers.AutoModel.from_pretrained(model_name)
+        self.tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_name, cache_dir=cache_dir)
+        self.transformer = transformers.AutoModel.from_pretrained(model_name, cache_dir=cache_dir)
         self.clip_head = torch.nn.Linear(in_features=768, out_features=640)
         self._load_head()
 
@@ -63,6 +63,6 @@ AVAILABLE_MODELS = {
 }
 
 
-def load_model(name):
+def load_model(name, cache_dir=None):
     config = AVAILABLE_MODELS[name]
-    return MultilingualClip(**config)
+    return MultilingualClip(**config, cache_dir=cache_dir)
