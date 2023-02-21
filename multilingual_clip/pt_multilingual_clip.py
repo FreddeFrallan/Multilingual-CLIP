@@ -19,6 +19,12 @@ class MultilingualCLIP(transformers.PreTrainedModel):
         embs = (embs * att.unsqueeze(2)).sum(dim=1) / att.sum(dim=1)[:, None]
         return self.LinearTransformation(embs)
 
+    def forward_after_tokenization(self, input_tensor):
+        att = input_tensor['attention_mask']
+        embs = self.transformer(**input_tensor)[0]
+        embs = (embs * att.unsqueeze(2)).sum(dim=1) / att.sum(dim=1)[:, None]
+        return self.LinearTransformation(embs)
+
     @classmethod
     def _load_state_dict_into_model(cls, model, state_dict, pretrained_model_name_or_path, _fast_init=True):
         model.load_state_dict(state_dict)
